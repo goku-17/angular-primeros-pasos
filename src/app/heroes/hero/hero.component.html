@@ -1,0 +1,33 @@
+<h1>{{ name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ edad }}</dd>
+
+  <td>Metodo:</td>
+  <!-- Los metodos se invocan con parentesis -->
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<!-- ngIf es una directiva -->
+<!-- === evalua el tipo de dato -->
+<!-- !== es diferente a esto -->
+<!-- ngIf nos sirve para mostrar un elemento si la condicion es verdadera -->
+<button
+  *ngIf="name !== 'Venom'"
+  (click)="chageHero()"
+  class="btn btn-primary mx-2"
+>
+  Cambiar nombre
+</button>
+<button *ngIf="edad !== 50" (click)="changeAge()" class="btn btn-info">
+  Cambiar edad
+</button>
+
+<button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
