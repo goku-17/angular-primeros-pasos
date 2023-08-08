@@ -5,6 +5,7 @@ import { CounterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
 
 import { AppComponent } from './app.component';
+import { DbzModule } from './dbz/dbz.module';
 
 
 
@@ -14,12 +15,14 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
 
+
   ],
   //Siempre los modulos van en los imports
   imports: [
     BrowserModule,
     CounterModule,
-    HeroesModule
+    HeroesModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<h1>DBZ Main Page</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- onDeleteID -->
+    <app-dbz-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+    ></app-dbz-list>
+  </div>
+
+  <div class="col">
+    <app-dbz-add-character-goku
+      (onNewCharacter)="onNewCharacter($event)"
+    ></app-dbz-add-character-goku>
+  </div>
+</div>
+
+<!-- $event es para recibir informacion del hijo al padre-->
